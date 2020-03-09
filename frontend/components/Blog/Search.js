@@ -33,18 +33,6 @@ const Search = () => {
 
     const searchedBlogs = (results = []) => {
         return (
-            // <div>
-            //     {message && <p>{message}</p>}
-
-            //     {results.map((blog, i) => {
-            //         return (
-            //             <Modal.Dialog key={i}>
-            //                 <Link href={`/blogs/${blog.slug}`}><a>{blog.title}</a></Link>
-            //             </Modal.Dialog>
-            //         );
-            //     })}
-            // </div>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>{message && <p>{message}</p>}</Modal.Header>
                 <Modal.Body>
@@ -67,15 +55,9 @@ const Search = () => {
     const searchForm = () => {
         return (
             <>
-                {/* <Form inline>
-                    <FormControl type="search" placeholder="Search Posts" className="mr-sm-2" onChange={handleChange} />
-                    <Button onClick={searchSubmit} variant="none" style={{borderColor: `hotpink`, backgroundColor: `hotpink`}}>Search</Button>
-                </Form>
-                {searched && <div style={{position: `fixed`, top: `50px`, backgroundColor: `hotpink`, zIndex: `10000`, width: `100%`}}>{searchedBlogs(results)}</div>} */}
-
-                <Form inline>
-                    <FormControl type="search" placeholder="Search Posts" className="mr-sm-2" onChange={handleChange} />
-                    <Button onClick={searchSubmit} variant="none" style={{borderColor: `hotpink`, backgroundColor: `hotpink`, color: `lavenderblush`}}>Search</Button>
+                <Form inline className="searchbox">
+                    <FormControl type="search" placeholder="Search Posts" onChange={handleChange} />
+                    <Button onClick={searchSubmit} className="button dark">Search</Button>
                 </Form>
                 {searched && <div style={{position: `fixed`, zIndex: `10000`}}>{searchedBlogs(results)}</div>}
             </>
