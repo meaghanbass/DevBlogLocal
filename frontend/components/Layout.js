@@ -1,6 +1,6 @@
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 import Header from "../components/Header/Header";
-import Sidebar from "../components/Sidebar/Sidebar";
+// import Sidebar from "../components/Sidebar/Sidebar";
 import Footer from "../components/Footer/Footer";
 
 const Layout = ({children}) => {
@@ -9,11 +9,11 @@ const Layout = ({children}) => {
             <Header />
 
             <div className="content-wrapper">
-                <Sidebar />
+                {/* <Sidebar /> */}
                 <div className="container-wrapper">
-                    <Container>
+                    <div>
                         {children}
-                    </Container>
+                    </div>
                     <Footer />
                 </div>
             </div>
