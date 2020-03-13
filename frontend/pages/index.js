@@ -10,7 +10,7 @@ const Index = ({ blogs, categories, router }) => {
                     <h1>{APP_NAME}</h1>
                 </div>                
                 <div className="hero" style={{color: `white`, display: `flex`, alignItems: `center`}}>
-                    <p>JSON.stringify(blogs)</p>
+                    
                 </div>
             </div>
         </Layout>
