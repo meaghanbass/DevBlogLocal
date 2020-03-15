@@ -2,6 +2,8 @@ import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import DropdownToggle from "react-bootstrap/DropdownToggle";
+import DropdownMenu from "react-bootstrap/DropdownMenu";
 import NavLink from "react-bootstrap/NavLink";
 import Col from 'react-bootstrap/Col'
 import { APP_NAME } from "../../config";
@@ -72,19 +74,19 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
                         <div>
-                        <Link href="/"><a className="button transparent">Virtual Reality</a></Link>
+                        <Link href="/categories/virtual-reality"><a className="button transparent">Virtual Reality</a></Link>
                         </div>
                     
                         <div>
-                        <Link href="/"><a className="button transparent">Augmented Reality</a></Link>
+                        <Link href="/categories/augmented-reality"><a className="button transparent">Augmented Reality</a></Link>
                         </div>
                     
                         <div>
-                        <Link href="/"><a className="button transparent">Spatial Computing</a></Link>
+                        <Link href="/categories/spatial-computing"><a className="button transparent">Spatial Computing</a></Link>
                         </div>
 
                         <div>
-                        <Link href="/"><a className="button transparent">Game Development</a></Link>
+                        <Link href="/categories/game-development"><a className="button transparent">Game Development</a></Link>
                         </div>
 
                         <div>

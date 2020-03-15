@@ -53,8 +53,9 @@ $ npm run dev
 
 ##### next.config.js
     const withCSS = require('@zeit/next-css');
+    const withSCSS = require('@zeit/next-sass');
 
-    module.exports = withCSS({
+    module.exports = withSCSS(withCSS({
         publicRuntimeConfig: {
             APP_NAME: 'SEO Blog',
             API_DEVELOPMENT: 'http://localhost:8000/api',
@@ -65,7 +66,7 @@ $ npm run dev
             DISQUS_SHORTNAME: 'seoblog-15'
         },
         devtool: 'source-map'
-    });
+    }));
 
 
 

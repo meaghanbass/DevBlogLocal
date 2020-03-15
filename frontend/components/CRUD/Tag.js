@@ -111,7 +111,7 @@ const Tag = () => {
             </div>
             <div>
                 <button onClick={clickSubmit} className="btn btn-primary">
-                    Create
+                    Create Tag
                 </button>
             </div>
         </form>

@@ -9,8 +9,8 @@ const Index = ({ blogs, categories, router }) => {
                 <div className="site-brand">
                     <h1>{APP_NAME}</h1>
                 </div>                
-                <div className="hero" style={{color: `white`, display: `flex`, alignItems: `center`}}>
-                    
+                <div className="hero" style={{color: `white`, display: `flex`, alignItems: `center`, justifyContent: `center`}}>
+                    <h1>Blog Title</h1>
                 </div>
             </div>
         </Layout>

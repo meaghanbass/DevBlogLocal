@@ -111,7 +111,7 @@ const Category = () => {
             </div>
             <div>
                 <button onClick={clickSubmit} className="btn btn-primary">
-                    Create
+                    Create Category
                 </button>
             </div>
         </form>
