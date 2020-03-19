@@ -26,6 +26,11 @@ header {
     .navbar {
         padding: 0;
     }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    
     .navbar-brand {
         width: 100px;
         margin: 0;
@@ -44,7 +49,7 @@ header {
         > div {
             width: 100%;
             text-align: center;
-            opacity: 0.5;
+            // opacity: 0.5;
             border-right: 1px solid #4f4f55;
             height: 47px;
             justify-content: space-between;
@@ -54,7 +59,64 @@ header {
             a {
                 width: 140px;
                 margin: auto;
-                color: rgb(255,255,255);
+                color: rgba(255,255,255,0.5);
+            }
+            
+            .dropdown {
+                width: 140px;
+                margin: auto;
+
+                &.show {
+                    position: initial;
+
+                    .show {
+                        width: 100%;
+                    }
+                }
+
+                a {
+                    // color: white !important;
+                }
+            }
+        }
+
+        > div.opacity-1 {
+
+            .dropdown {
+                
+                > a {
+                    color: rgba(255,255,255,0.5);
+
+                    &:hover {
+                        color: rgba(255,255,255,0.5);
+                    }
+                    &:active {
+                        color: rgba(255,255,255,0.5);
+                    }
+                    &:focus {
+                        color: rgba(255,255,255,0.5);
+                    }
+                    &:focus-within {
+                        color: rgba(255,255,255,0.5);
+                    }
+                    &:visited {
+                        color: rgba(255,255,255,0.5);
+                    }
+                }
+
+                .dropdown-menu {
+                    background: black;
+                    border-radius: 0;
+                    border: none;
+                    margin: 0;
+
+                    .dropdown-item {
+                        color: white;
+                        width: auto !important;
+                    }
+                }
+
+                
             }
         }
     }

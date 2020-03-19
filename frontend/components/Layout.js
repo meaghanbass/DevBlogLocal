@@ -1,6 +1,4 @@
-// import Container from "react-bootstrap/Container";
 import Header from "../components/Header/Header";
-// import Sidebar from "../components/Sidebar/Sidebar";
 import Footer from "../components/Footer/Footer";
 
 const Layout = ({children}) => {
@@ -9,7 +7,6 @@ const Layout = ({children}) => {
             <Header />
 
             <div className="content-wrapper">
-                {/* <Sidebar /> */}
                 <div className="container-wrapper">
                     <div>
                         {children}
@@ -17,7 +14,6 @@ const Layout = ({children}) => {
                     <Footer />
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
     );
 };

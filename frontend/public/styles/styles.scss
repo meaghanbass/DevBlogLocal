@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
 * {
 	-webkit-font-smoothing: antialiased;
@@ -9,6 +10,11 @@
 
 #nprogress .bar {
     height: 5px !important;
+    background-color: #DE84EC !important;
+}
+
+#nprogress .peg {
+    box-shadow:0 0 10px #DE84EC !important;
 }
 
 .ql-editor {
@@ -24,7 +30,9 @@
 .page-wrapper {
 
     .content-wrapper {
-
+        position: relative;
+        // z-index: -1;
+        
         .container-wrapper {
             position: relative;
 
@@ -55,8 +63,121 @@
     }
     .hero {
         height: 800px;
-        background-image: url('/images/stock/shutterstock_528831091-min.jpg');
         background-size: cover;
         background-position: center center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a {
+
+            .category {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 14px;
+                text-transform: capitalize;
+                line-height: 17px;
+                text-align: center;
+                letter-spacing: 1.5px;
+                color: rgba(255, 255, 255, 0.8);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                padding-bottom: 10px;
+            }
+
+            h1{
+                color: white;
+                font-family: Merriweather;
+                font-weight: 900;
+                font-size: 5rem;
+                line-height: 6rem;
+                text-align: center;
+                letter-spacing: 1.5px;
+                width: 80vw;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .highlights {
+        max-width: calc(340px + 340px + 340px + 330px); //might delete or alter later
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: max-content;
+        margin-top: -100px;
+
+        h4 {
+            font-family: Merriweather;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 1.5px;
+            color: #FFFFFF;
+        }
+
+        .card-wrapper {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            .highlight-card {
+                width: 25%;
+                max-width: 330px;
+
+                .image {
+                    width: 100%;
+                    height: 220px;
+                    max-height: 15vw;
+                    background-size: cover;
+                    background-position: center center;
+                }
+
+                .info {
+                    text-align: center;
+
+                    .category {
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 10px;
+                        line-height: 200%;
+                        text-transform: uppercase;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
+
+                    .title {
+                        font-family: Source Sans Pro;
+                        font-weight: 700;
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        line-height: 25px;
+                        color: #000000;
+                        margin: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                    }
+
+                    .published {
+                        font-family: Source Sans Pro;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 30px;
+                        color: #000000;
+                    }
+                }
+            }
+        }
     }
 }

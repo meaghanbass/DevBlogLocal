@@ -13,6 +13,7 @@ import NProgress from "nprogress";
 import "../../node_modules/nprogress/nprogress.css";
 import Search from "../Blog/Search";
 
+NProgress.configure({ showSpinner: false });
 Router.onRouteChangeStart = url => NProgress.start();
 Router.onRouteChangeComplete = url => NProgress.done();
 Router.onRouteChangeError = url => NProgress.done();
@@ -89,8 +90,16 @@ const Navigation = () => {
                         <Link href="/categories/game-development"><a className="button transparent">Game Development</a></Link>
                         </div>
 
-                        <div>
-                        <Link href="/"><a className="button transparent">More</a></Link>
+                        <div className="opacity-1">
+                        {/* <Link href="/"><a className="button transparent">More</a></Link> */}
+                        <NavDropdown title="More" id="basic-nav-dropdown" className="button transparent">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                            <Search />
+                        </NavDropdown>
                         </div>
                     </Nav>
                 </Navbar.Collapse>
