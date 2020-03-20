@@ -8,6 +8,30 @@ import HighlightCardSm from "../components/Blog/HighlightCardSm";
 
 const Index = ({ blogs, categories, router, blogsLimit, totalBlogs, tags }) => {
 
+    // FUN CONSOLE
+    console.log(`
+       ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,             
+     ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,        
+    ,,,,                              ,,,,,,,,,,,,    
+    ,,,,              ,**************     ,,,,,,,,,,  
+    ,,,,         .**,********************    ,,,,,,,,,
+    ,,,,       *****************************   ,,,,,,,
+    ,,,,     ****       ***********      ,****   ,,,,,
+    ,,,,    *****       ***********      ,*****   ,,,,
+    ,,,,   ******       ***********      *******   ,,,
+    ,,,,  ,******       ***********      *******.  ,,,
+    ,,,,  *******       ***********      ,*******  ,,,
+    ,,,,  ********      ***********      ,******,  ,,,
+    ,,,,   *******.        ********      ,******   ,,,
+    ,,,,,   ******//                     ,*****   ,,,,
+    ,,,,,,   **********                  ,****   ,,,,,
+     ,,,,,,,   *****************************   ,,,,,,,
+      ,,,,,,,,   ************************,   ,,,,,,,,,
+       ,,,,,,,,,     ****************,    ,,,,,,,,,,,,
+         ,,,,,,,,,,,,                 ,,,,,,,,,,,,,,, 
+           ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,   
+    `);
+
     // This section is for the home page hero preview
         const myblogs = (blogs);
         // console.log(myblogs);
@@ -26,7 +50,7 @@ const Index = ({ blogs, categories, router, blogsLimit, totalBlogs, tags }) => {
         return (
             <>
             <div className="hero" style={{backgroundImage: `url(${API}/blog/photo/${mostRecent.slug})`}}>                
-                <Link href={`/blogs/${mostRecent.slug}`}>
+                <Link href={`/categories/${mostRecent.categories[0].slug}`}>
                     <a style={{color: `white`}}>
                         <p className="category">{mostRecent.categories[0].name}</p>
                     </a>
@@ -43,10 +67,10 @@ const Index = ({ blogs, categories, router, blogsLimit, totalBlogs, tags }) => {
                 <h4>Highlights</h4>
                 
                 <div className="card-wrapper">
-                    <HighlightCardSm blogs={blogs.slice(-2)[0]} textColor={'#A8D685'} marginRight={'10px'}/>
-                    <HighlightCardSm blogs={blogs.slice(-3)[0]} textColor={'#CA85D6'} marginRight={'10px'}/>
-                    <HighlightCardSm blogs={blogs.slice(-4)[0]} textColor={'#BDA462'} marginRight={'10px'}/>
-                    <HighlightCardSm blogs={blogs.slice(-5)[0]} textColor={'#428bca'}/>
+                    <HighlightCardSm blogs={blogs.slice(-2)[0]}/>
+                    <HighlightCardSm blogs={blogs.slice(-3)[0]}/>
+                    <HighlightCardSm blogs={blogs.slice(-4)[0]}/>
+                    <HighlightCardSm blogs={blogs.slice(-5)[0]}/>
                 </div>
             </div>
             </>
